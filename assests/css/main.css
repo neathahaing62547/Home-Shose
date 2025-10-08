@@ -68,7 +68,7 @@
       margin-left: 40px;
       margin-top: 10px;
       z-index: 1000;
-      transform: translate(-50px,0px);
+       transform: translate(20px,0px);
       animation-name: logo;
       animation-duration: 3s;
       animation-timing-function:ease-in-out;
@@ -77,18 +77,24 @@
 }
 @keyframes logo{
     0%{
-        transform: translate(500px,400px);
+        transform: translate(700px,350px);
         opacity: 0;
+        width: 300px;
+        height: 200px;
         
     }
    50%{
-        transform: translate(500px,400px);
+        transform: translate(700px,350px);
         opacity: 1 ;
+        width: 400px;
+        height: 200px;
+        
     }
      100%{
-        transform: translate(-50px,0px);
+        transform: translate(20px,0px);
     }   
 } 
+
 .navbar  .navbar-nav{
      list-style-type: none;
       display: flex;
@@ -118,6 +124,31 @@
 .navbar .col-5:last-child .nav-item{
      list-style-type: none;
      padding: 12px 48px;
+}
+.navbar  .navbar-nav .nav-item:before{
+     content: "";
+     width: 2px;
+     height: 4px;
+     background-color: rgb(51, 51, 58);
+     position: absolute;
+     border-radius: 5px;
+     bottom: 0px;
+     transition: 0.5s;
+     opacity: 0;
+
+
+}
+.navbar  .navbar-nav .nav-item:hover::before{
+     width: 90%;
+     opacity: 1;
+}
+.navbar  .navbar-nav .nav-item:first-child:hover:before{
+     width: 70%;
+     opacity: 1;
+}
+.navbar  .navbar-nav .nav-item:nth-child(2):hover:before{
+     width: 68%;
+     opacity: 1;
 }
 .navbar .col-5:last-child .nav-item .nav-link{
      text-decoration: none;
@@ -524,4 +555,5 @@
 }
 
     
+
     
